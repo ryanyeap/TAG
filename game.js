@@ -42,106 +42,114 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: `You see a door.
-        It says "04-553".
-        There is a key on the floor.`,
+        text: `"BEEP BEEP BEEP!"`,
         options: [
             {
-                text: 'Knock on the door.',
+                text: 'Press the snooze button and go back to sleep.',
                 nextText: 2
             },
             {
-                text: 'Open the door.',
+                text: 'Pick up your phone.',
                 nextText: 3
-            },
-            {
-                text: 'Pick up the key.',
-                setState: { houseKey: true },
-                nextText: 4
             }
         ]
     },
     {
         id: 2,
-        text: `You knock on the door...
-        No response.`,
+        text: `Zzzzzzzz...
+        Ten minutes pass.`,
         options: [
             {
-                text: 'Open the door.',
-                nextText: 3
-            },
-            {
-                text: 'Pick up the key.',
-                setState: { houseKey: true },
-                nextText: 4
-            }
-        ]
-
-    },
-    {
-        id: 3,
-        text: `You turn the door handle.
-        It is lock.`,
-        options: [
-            {
-                text: 'Pick up the key.',
-                setState: { houseKey: true },
-                nextText: 4
-            }
-        ]
-
-    },
-    {
-        id: 4,
-        text: `You pick up the key and put it in your pocket.`,
-        options: [
-            {
-                text: 'Hit the door with the key',
-                nextText: 5
-            },
-            {
-                text: 'Unlock the door with the key',
-                nextText: 6
-            }
-        ]
-
-    },
-    {
-        id: 5,
-        text: `You hit the door furiously with the key.
-        The key breaks.
-        The door is still locked.`,
-        options: [
-            {
-                text: 'Restart.',
-                setState: { houseKey: false },
+                text: 'This feels nice. So comfy.',
                 nextText: -1
             }
         ]
 
     },
     {
-        id: 6,
-        text: `You unlock the door with the key.
-        A satisfying click.`,
+        id: 3,
+        text: `You pick up your phone.
+        The bright screen temporarily blinds you.
+        Rubbing your eyes you tap on the "Stop" alarm button and look at the screen.
+        "6am."
+        A few seconds pass and you get out of bed.`,
         options: [
             {
-                text: 'Step inside the door.',
-                setState: { houseKey: false },
+                text: 'Go to the toilet.',
+                nextText: 4
+            },
+            {
+                text: 'Go to the kitchen.',
+                nextText: 5
+            }
+        ]
+
+    },
+    {
+        id: 4,
+        text: `You reach the toilet.
+        It is dark.`,
+        options: [
+            {
+                text: 'Pee in the dark.',
+                nextText: 6
+            },
+            {
+                text: 'Flip the light switch.',
                 nextText: 7
             }
         ]
 
     },
     {
-        id: 7,
-        text: `You see a door.
-        It says "04-553".
-        There is a key on the floor.
-        Wait, what?`,
+        id: 5,
+        text: `You reach the kitchen.
+        Moonlight streams through the windows.
+        You feel neither hungry nor thirsty.`,
         options: [
             {
-                text: 'Rub your eyes.',
+                text: 'Go to the toilet.',
+                nextText: 4
+            }
+        ]
+
+    },
+    {
+        id: 6,
+        text: `You start peeing and realize
+        that you are actually in the kitchen. 
+        Peeing in your breakfast bowl.
+        OMG.
+        `,
+        options: [
+            {
+                text: 'This must be a dream.',
+                nextText: -1
+            }
+        ]
+
+    },
+    {
+        id: 7,
+        text: `The lights flicker on.
+        You see yourself in the mirror.`,
+        options: [
+            {
+                text: 'Pee.',
+                // setState: { houseKey: false },
+                nextText: 8
+            }
+        ]
+
+    },
+    {
+        id: 8,
+        text: `You Pee.
+        A great sense of relief.
+        To be continued...`,
+        options: [
+            {
+                text: 'Restart story.',
                 nextText: -1
             }
         ]
