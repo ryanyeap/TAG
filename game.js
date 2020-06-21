@@ -93,7 +93,7 @@ const textNodes = [
     },
     {
         id: 4,
-        text: `You pick up the key and out it in your pocket.`,
+        text: `You pick up the key and put it in your pocket.`,
         options: [
             {
                 text: 'Hit the door with the key',
